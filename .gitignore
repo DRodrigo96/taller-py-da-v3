@@ -1,0 +1,6 @@
+__pycache__
+secrets/
+mocks/*
+!mocks/.gitkeep
+temp/*
+!temp/.gitkeep

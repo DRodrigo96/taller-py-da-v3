@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>ML API</title>
+</head>
+    <body style="background-color: #f0f0f0; font-family: Roboto, Arial, sans-serif">
+        <center>
+            
+            {% if data == "ERROR" %}
+            <div>
+                <h1>Input error, try again please.</h1>
+                <img src="static/images/error.jpg" alt="error">
+            </div>
+            
+            {% else %}
+            <div>
+                <h1>The PRICE is</h1>
+            </div>
+            <div>
+                <p> {{ data }} </p>
+                <img src="static/images/done.jpg" alt="done">
+            </div>
+            
+            {% endif %}
+            <br><br>
+            <div>
+                <a href='/'>Go back to main page</a>
+            </div>
+            
+        </center>
+    </body>
+</html>

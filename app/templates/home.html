@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pricing App</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+  <div class="testbox">
+    <form method="POST", action="{{ url_for('home') }}">
+      <div class="banner">
+        <h1>House pricing model (testing env)</h1>
+      </div>
+      
+      <div class="item">
+        <label for="PROVINCIA_">Provincia<span> *</span></label>
+        <select name="PROVINCIA_" id="PROVINCIA_" placeholder="Seleccione de lista" required>
+            <option selected value="" disabled selected></option>
+            <option value="Lima" >LIMA</option>
+            <option value="Callao">CALLAO</option>
+        </select>
+      </div>
+      
+      <div class="item">
+        <label for="IDDIST">Distrito<span> *</span></label>
+        <select name="IDDIST" id="IDDIST" placeholder="Seleccione de lista" required>
+            <option selected value="" disabled selected></option>
+            <option value="150102">ANCON</option>
+            <option value="150103">ATE</option>
+            <option value="150104">BARRANCO</option>
+            <option value="70102">BELLAVISTA</option>
+            <option value="150105">BREÑA</option>
+            <option value="70101">CALLAO</option>
+            <option value="150106">CARABAYLLO</option>
+            <option value="70103">CARMEN DE LA LEGUAREYNOSO</option>
+            <option value="150101">CERCADO DE LIMA</option>
+            <option value="150107">CHACLACAYO</option>
+            <option value="150108">CHORRILLOS</option>
+            <option value="150109">CIENEGUILLA</option>
+            <option value="150110">COMAS</option>
+            <option value="150111">EL AGUSTINO</option>
+            <option value="150112">INDEPENDENCIA</option>
+            <option value="150113">JESUS MARIA</option>
+            <option value="150114">LA MOLINA</option>
+            <option value="70104">LA PERLA</option>
+            <option value="70105">LA PUNTA</option>
+            <option value="150115">LA VICTORIA</option>
+            <option value="150116">LINCE</option>
+            <option value="150117">LOS OLIVOS</option>
+            <option value="150118">LURIGANCHO</option>
+            <option value="150119">LURIN</option>
+            <option value="150120">MAGDALENA DEL MAR</option>
+            <option value="70107">MI PERU</option>
+            <option value="150122">MIRAFLORES</option>
+            <option value="150123">PACHACAMAC</option>
+            <option value="150121">PUEBLO LIBRE</option>
+            <option value="150125">PUENTE PIEDRA</option>
+            <option value="150126">PUNTA HERMOSA</option>
+            <option value="150127">PUNTA NEGRA</option>
+            <option value="150128">RIMAC</option>
+            <option value="150130">SAN BORJA</option>
+            <option value="150131">SAN ISIDRO</option>
+            <option value="150132">SAN JUAN DE LURIGANCHO</option>
+            <option value="150133">SAN JUAN DE MIRAFLORES</option>
+            <option value="150134">SAN LUIS</option>
+            <option value="150135">SAN MARTIN DE PORRES</option>
+            <option value="150136">SAN MIGUEL</option>
+            <option value="150137">SANTA ANITA</option>
+            <option value="150140">SANTIAGO DE SURCO</option>
+            <option value="150141">SURQUILLO</option>
+            <option value="70106">VENTANILLA</option>
+            <option value="150142">VILLA EL SALVADOR</option>
+            <option value="150143">VILLA MARIA DEL TRIUNFO</option>
+        </select>
+      </div>
+      
+      <div class="item">
+        <label for="area_constr_m2">Área construída (mt2)<span> **</span></label>
+        <input id="area_constr_m2" name="area_constr_m2" type="number" step="0.01" required/>
+      </div>
+      
+      <div class="item">
+        <label for="area_total_m2">Área total (m2)<span> **</span></label>
+        <input id="area_total_m2" name="area_total_m2" type="number" step="0.01" required/>
+      </div>
+      
+      <div class="item">
+        <label for="nro_espacios">Número de espacios<span> **</span></label>
+        <input id="nro_espacios" name="nro_espacios" type="number" step="1" required/>
+      </div>
+      
+      <div class="item">
+        <label for="antiguedad">Antigüedad<span> **</span></label>
+        <input id="antiguedad" name="antiguedad" type="number" step="1" required/>
+      </div>
+      
+      <div class="item">
+        <label for="estado_de_inmueble_">Estado del inmueble<span> *</span></label>
+        <select name="estado_de_inmueble_" id="estado_de_inmueble_" required>
+            <option selected value="" disabled selected></option>
+            <option value="Excelente">Excelente</option>
+            <option value="Muy bueno">Muy bueno</option>
+            <option value="Bueno">Bueno</option>
+            <option value="Regular">Regular</option>
+            <option value="Remodelado">Remodelado</option>
+            <option value="A Remodelar">A Remodelar</option>
+            <option value="NE" >No especifica</option>
+        </select>
+      </div>
+      
+      <div class="item">
+        <label for="latitud">Latitud<span> **</span></label>
+        <input id="latitud" name="latitud" required/>
+      </div>
+      
+      <div class="item">
+        <label for="longitud">Longitud<span> **</span></label>
+        <input id="longitud" name="longitud" required/>
+      </div>
+      
+      <p>
+        <small>* Obligatorio</small>
+        <br>
+        <small>** Only numbers</small>
+      </p>
+      
+      <div class="btn-block">
+        <button type="submit">SUBMIT</button>
+      </div>
+      
+    </form>
+  </div>
+</body>
+</html>
